@@ -20,3 +20,12 @@
 # print('밑은 {0}, 지수는 {1}, 결과 값은 {2}'.format(base_number, exponent_number, pow(base_number,exponent_number)))
 #c like[전전버젼]
 # print('밑은 %d, 지수는 %d, 결과 값은 %d' %(base_number, exponent_number, base_number**exponent_number))
+
+
+first_number = int(input("First number : "))
+second_number = int(input("Second number : "))
+quotient = first_number // second_number
+remainder = first_number % second_number
+print(f'몫은 {quotient}, 나머지는 {remainder} 입니다.')
+print(f'몫은 {divmod(first_number, second_number)[0]}, 나머지는 {divmod(first_number,second_number)[1]} 입니다.')
+# print(divmod(9,5)) 위처럼 몫과 나머지를 한번에 나타내주는 함수
