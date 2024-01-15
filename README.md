@@ -1,1 +1,1 @@
-DAY 01! 
+STUDY HARD!!!
