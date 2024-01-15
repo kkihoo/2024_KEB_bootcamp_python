@@ -33,12 +33,23 @@
 # print(-5**2) # 25가 아니라 -25로 출력
 
 #10진수, 8진수, 16진수, 2진수
-dec = 65
-octal = 0o101
-hexadecimal = 0x41
-binary = 0b01000001
-print(dec, octal, hexadecimal, binary)
-print(chr(binary)) #ascii코드
-print(chr(dec), chr(octal), chr(hexadecimal), chr(binary))
-print(bin(dec), bin(octal), bin(hexadecimal), bin(binary))
-print(ord('B'), ord('Z'), ord('a'), ord('2'))
+# dec = 65
+# octal = 0o101
+# hexadecimal = 0x41
+# binary = 0b01000001
+# print(dec, octal, hexadecimal, binary)
+# print(chr(binary)) #ascii코드
+# print(chr(dec), chr(octal), chr(hexadecimal), chr(binary))
+# print(bin(dec), bin(octal), bin(hexadecimal), bin(binary))
+# print(ord('B'), ord('Z'), ord('a'), ord('2'))
+
+#화씨에서 섭씨 바꿔보기
+# fahrenheit = float(input('Input Fahrenheit : '))
+# print(f'Fahrenheit : {fahrenheit}F, Celsius : {(fahrenheit - 32) * 5 / 9:.4f}C') #.4f 소수점 4번째 자리까지 나타내기
+
+#앞에 넣고 뒤에 몇진법을 10진수로 나타낼건지
+# print(int('1F', 16))
+
+print(float(True)) #1.0
+print(float(False)) #0.0
+print(5 + 2.0) #정수와 소수형 섞어 사용 가능
