@@ -33,10 +33,12 @@
 # print(-5**2) # 25가 아니라 -25로 출력
 
 #10진수, 8진수, 16진수, 2진수
-# dec = 65
-# octal = 0o101
-# hexadecimal = 0x41
-# binary = 0b01000001
-# print(dec, octal, hexadecimal, binary)
-# print(chr(binary)) #ascii코드
-# print(chr(dec), chr(octal), chr(hexadecimal), chr(binary))
+dec = 65
+octal = 0o101
+hexadecimal = 0x41
+binary = 0b01000001
+print(dec, octal, hexadecimal, binary)
+print(chr(binary)) #ascii코드
+print(chr(dec), chr(octal), chr(hexadecimal), chr(binary))
+print(bin(dec), bin(octal), bin(hexadecimal), bin(binary))
+print(ord('B'), ord('Z'), ord('a'), ord('2'))
