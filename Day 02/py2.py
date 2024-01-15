@@ -54,7 +54,8 @@ if menu == '1' :
 elif menu == '2' :
     celsius = float(input('Input Celsius : '))
     print(f'Celsius : {celsius}C, Fahrenheit : {(celsius*9.0/5.0)+32.0:.2f}F')
-
+else :
+    print('Terminate Program.')
 #앞에 넣고 뒤에 몇진법을 10진수로 나타낼건지
 # print(int('1F', 16))
 
