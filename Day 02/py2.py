@@ -46,10 +46,18 @@
 #화씨에서 섭씨 바꿔보기
 # fahrenheit = float(input('Input Fahrenheit : '))
 # print(f'Fahrenheit : {fahrenheit}F, Celsius : {(fahrenheit - 32) * 5 / 9:.4f}C') #.4f 소수점 4번째 자리까지 나타내기
+menu = input("1) Fahrenheit -> Celsius  2) Celsius -> Fahrenheit  3) Quit program : ")
+
+if menu == '1' :
+    fahrenheit = float(input('Input Fahrenheit : '))
+    print(f'Fahrenheit : {fahrenheit}F, Celsius : {(fahrenheit - 32) * 5 / 9:.2f}C')
+elif menu == '2' :
+    celsius = float(input('Input Celsius : '))
+    print(f'Celsius : {celsius}C, Fahrenheit : {(celsius*9.0/5.0)+32.0:.2f}F')
 
 #앞에 넣고 뒤에 몇진법을 10진수로 나타낼건지
 # print(int('1F', 16))
 
-print(float(True)) #1.0
-print(float(False)) #0.0
-print(5 + 2.0) #정수와 소수형 섞어 사용 가능
+# print(float(True)) #1.0
+# print(float(False)) #0.0
+# print(5 + 2.0) #정수와 소수형 섞어 사용 가능
