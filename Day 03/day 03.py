@@ -112,20 +112,37 @@
 
 
 # prime number
-number = int(input("Input number : "))
-is_prime = True
+# number = int(input("Input number : "))
+# is_prime = True
+#
+# if number < 2:
+#     print(f'{number} is NOT prime number!')
+# else:
+#     i = 2
+#     while i < number:
+#         if number % i == 0:
+#             is_prime = False
+#             break
+#         i = i + 1
+#
+#     if is_prime:
+#         print(f'{number} is prime number')
+#     else:
+#         print(f'{number} is NOT prime number!')
 
-if number < 2:
-    print(f'{number} is NOT prime number!')
-else:
-    i = 2
-    while i < number:
-        if number % i == 0:
-            is_prime = False
-            break
-        i = i + 1
+univ = 'inha'
+i = 0
+while i < len(univ):
+    print(univ[i], end = ' ')
+    i = i + 1
 
-    if is_prime:
-        print(f'{number} is prime number')
-    else:
-        print(f'{number} is NOT prime number!')
+print()
+
+for letter in univ :
+    print(letter, end = ' ')
+
+print()
+
+for k in range(len(univ)): # 1은 1씩 증가한다는 뜻 2나 3같은 다른 수로 변경 가능 대부분 1은 생략 , 시작값도 0이 기본
+    print(univ[k], end = ' ')
+
