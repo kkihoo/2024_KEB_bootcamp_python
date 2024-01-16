@@ -21,13 +21,17 @@
 # print('P' + name[1:]) #name[1:]은 0번 뒤인 1번부터 다 불러온다.
 
 #슬라이스
-university = "Inha\nUniversity!"
-print(university[:4])
-print(university[:-12])
-print(len(university)) #몇글자인지
-print(university[0:len(university)]) # =(university[0:16])
-print(university[5:]) #5번부터 끝까지
-print(university[:16])#0번부터 16번까지
-print(university[::2]) #두칸씩 비우고 나타내줌
-print(university[0:16:3])#0부터 16번까지 3칸씩 띄워서 나타냄
+# university = "Inha\nUniversity!"
+# print(university[:4])
+# print(university[:-12])
+# print(len(university)) #몇글자인지
+# print(university[0:len(university)]) # =(university[0:16])
+# print(university[5:]) #5번부터 끝까지
+# print(university[:16])#0번부터 16번까지
+# print(university[::2]) #두칸씩 비우고 나타내줌
+# print(university[0:16:3])#0부터 16번까지 3칸씩 띄워서 나타냄
 
+#split()
+course = "2024 KEB Bootcamp"
+print(course.split())
+print(course.split('B'))
