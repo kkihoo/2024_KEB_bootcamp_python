@@ -130,6 +130,7 @@
 #     else:
 #         print(f'{number} is NOT prime number!')
 
+# whiler과 for문으로 문자 나타내기
 # univ = 'inha'
 # i = 0
 # while i < len(univ):
