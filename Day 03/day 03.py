@@ -80,8 +80,15 @@
 # print(subjects.isalnum()) # 영어, 한글 또는 숫자만 있을경우 True, 아니면 False ++때문에 False
 
 # case 바꾸기
-setup = "a duck gose into a bar..."
-print(setup.capitalize()) # 맨 앞글자만 대문자로 바꿈
-print(setup.title()) # 각 단어마다 앞글자는 대문자로 변경
-print(setup.upper()) #모든 글 대문자로 변경
-print(setup.lower()) # 모든 문자 소문자로 변경
+# setup = "a duck gose into a bar..."
+# print(setup.capitalize()) # 맨 앞글자만 대문자로 바꿈
+# print(setup.title()) # 각 단어마다 앞글자는 대문자로 변경
+# print(setup.upper()) #모든 글 대문자로 변경
+# print(setup.lower()) # 모든 문자 소문자로 변경
+
+# %s %d %f (string, decimal, float)
+thing = 'woodchuck'
+print('%+12s' %thing) # 오른쪽 정렬
+
+thing = 91.58
+print('%+3f' %thing)
