@@ -65,3 +65,20 @@
 # print(url.strip('https://')) # 뒤에 t까지 지워버림
 # print(url.lstrip('https://')) # lstrip은 선행문자 하나만 지움
 # print(url.rstrip('.net')) # rstrip은 후행문자만 지움
+
+#특정문자 찾기
+course = "* KEB 2024# KEB! Bootcamp?."
+print(course.find('KEB')) # KEB가 몇번째에 있는지 세주는 함수
+print(course.rfind("KEB")) # 뒤에서부터 찾는 문자가 몇번째에 있는지
+print(course.startswith('KEB')) # 제일 앞에 있는 문자가 맞고 틀리는지 알려주는 함수
+print(course.endswith('.')) # 끝나는 문자가 맞는지 확인
+print(course.find('Inha')) # 찾는 문자가 없을때 -1를 출력
+# print(course.index('Inha')) #ValueError: substring not found 에러가 뜸
+
+# preview
+subjects = "python c++ database linux"
+subject = input("수강신청과목 입력 : ")
+if subjects.find(subject) != -1 :
+    print(f'해당 과목이 존재합니다. 위치는 {subjects.find(subject)}번 인덱스입니다.')
+else:
+    print('해당과목이 존재하지 않습니다.')
