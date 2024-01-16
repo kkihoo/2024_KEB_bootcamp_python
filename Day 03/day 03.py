@@ -94,5 +94,33 @@
 # print('%+3f' %thing)
 
 # Dictionary형 format
-subjects = {'python' : 'Kim', 'c++' : 'Sung', 'datastructure': 'Kim', 'database' : 'Kang' }
-print("{0[c++]} {0[datastructure]}".format(subjects))
+# subjects = {'python' : 'Kim', 'c++' : 'Sung', 'datastructure': 'Kim', 'database' : 'Kang' }
+# print("{0[c++]} {0[datastructure]}".format(subjects))
+
+#while문으로 소수 판독기 만들
+# num = int(input("Input number : "))
+# cnt = 0
+# i = 1
+# while i <= num :
+#     if num % i == 0 :
+#         cnt = cnt + 1
+#     i = i + 1
+# if cnt == 2:
+#     print(f'{num} is prime number')
+# else :
+#     print(f'{num} is NOT prime number')
+
+
+num = int(input("Input number : "))
+cnt = 0
+i = 2
+while i < num :
+    if num % i == 0 :
+        cnt = cnt + 1
+        break
+    # print(i, end = "")
+    i = i + 1
+if cnt == 0:
+    print(f'{num} is prime number')
+else :
+    print(f'{num} is NOT prime number')
