@@ -77,8 +77,4 @@
 
 # preview
 subjects = "python c++ database linux"
-subject = input("수강신청과목 입력 : ")
-try:
-    print(f'해당 과목이 존재합니다. 위치는 {subjects.index(subject)}번 인덱스입니다.')
-except ValueError:
-    print('해당과목이 존재하지 않습니다.')
+print(subjects.isalnum()) # 영어, 한글 또는 숫자만 있을경우 True, 아니면 False ++때문에 False
