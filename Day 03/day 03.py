@@ -12,5 +12,11 @@
 # print(start + start + middle + end) #문자열과 *는 함께 사용이 가능하다.
 
 #역방향 인덱싱
-letters = 'abcdefghijklmnopqrstuvwxyz'
-print(letters[-1])
+# letters = 'abcdefghijklmnopqrstuvwxyz'
+# print(letters[-1])
+
+#replace 함수
+name = "Henny"
+print(name.replace('H','P'))
+print('P' + name[1:]) #name[1:]은 0번 뒤인 1번부터 다 불러온다.
+
