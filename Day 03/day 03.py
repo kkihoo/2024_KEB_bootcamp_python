@@ -130,19 +130,35 @@
 #     else:
 #         print(f'{number} is NOT prime number!')
 
-univ = 'inha'
-i = 0
-while i < len(univ):
-    print(univ[i], end = ' ')
-    i = i + 1
+# univ = 'inha'
+# i = 0
+# while i < len(univ):
+#     print(univ[i], end = ' ')
+#     i = i + 1
+#
+# print()
+#
+# for letter in univ :
+#     print(letter, end = ' ')
+#
+# print()
+#
+# for k in range(len(univ)): # 1은 1씩 증가한다는 뜻 2나 3같은 다른 수로 변경 가능 대부분 1은 생략 , 시작값도 0이 기본
+#     print(univ[k], end = ' ')
 
-print()
+#prime number for문
+number = int(input("Input number : "))
+is_prime = True
 
-for letter in univ :
-    print(letter, end = ' ')
+if number < 2:
+    print(f'{number} is NOT prime number!')
+else:
+    for i in range(2,number):
+        if number % i == 0:
+            is_prime = False
+            break
 
-print()
-
-for k in range(len(univ)): # 1은 1씩 증가한다는 뜻 2나 3같은 다른 수로 변경 가능 대부분 1은 생략 , 시작값도 0이 기본
-    print(univ[k], end = ' ')
-
+    if is_prime:
+        print(f'{number} is prime number')
+    else:
+        print(f'{number} is NOT prime number!')
