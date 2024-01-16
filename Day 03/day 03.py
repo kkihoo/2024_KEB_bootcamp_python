@@ -46,14 +46,22 @@
 # print(subjects_string) #리스트에 있던 요소들이 /를 포함에서 한줄로 나타남
 
 
-문자열 replace
-# course = "2024 KEB Bootcamp"
-# print(course.replace('KEB', 'Inha')) #replace를 썼을때 잠시만 바뀜
-# print(course)
-# course = course.replace('KEB', 'Inha') #할당해주면 바꾸기 가능
+# 문자열 replace
+# # course = "2024 KEB Bootcamp"
+# # print(course.replace('KEB', 'Inha')) #replace를 썼을때 잠시만 바뀜
+# # print(course)
+# # course = course.replace('KEB', 'Inha') #할당해주면 바꾸기 가능
+# # print(course)
+#
+# course = "KEB 2024 KEB Bootcamp"
+# course = course.replace('KEB', 'Inha', 1) # .replace(바꿀 대상, 바뀔 문자, 몇개를 바꿀지)
 # print(course)
 
-course = "KEB 2024 KEB Bootcamp"
-course = course.replace('KEB', 'Inha', 1) # .replace(바꿀 대상, 바뀔 문자, 몇개를 바꿀지)
-print(course)
+# strip() 문자열과 공백을 제거
+# blurt = "What the...!!?"
+# print(blurt.strip('.?!')) # .?!를 없애고 나타냄
 
+# url = 'https://www.daum.net'
+# print(url.strip('https://')) # 뒤에 t까지 지워버림
+# print(url.lstrip('https://')) # lstrip은 선행문자 하나만 지움
+# print(url.rstrip('.net')) # rstrip은 후행문자만 지움
