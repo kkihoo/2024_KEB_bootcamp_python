@@ -147,18 +147,22 @@
 #     print(univ[k], end = ' ')
 
 #prime number for문
-number = int(input("Input number : "))
-is_prime = True
-
-if number < 2:
-    print(f'{number} is NOT prime number!')
-else:
-    for i in range(2,number):
-        if number % i == 0:
-            is_prime = False
-            break
-
-    if is_prime:
-        print(f'{number} is prime number')
-    else:
-        print(f'{number} is NOT prime number!')
+# number = int(input("Input number : "))
+# is_prime = True
+#
+# if number < 2:
+#     print(f'{number} is NOT prime number!')
+# else:
+#     for i in range(2,number):
+#         if number % i == 0:
+#             is_prime = False
+#             break
+#
+#     if is_prime:
+#         print(f'{number} is prime number')
+#     else:
+#         print(f'{number} is NOT prime number!')
+#
+for x in range(2, -1, -1): #2에서부터 -1까지 -1씩 줄어드는
+    print(x)
+print(list(range(0,11,2))) #0에서 10까지 2씩 증가 리스트로 출력
