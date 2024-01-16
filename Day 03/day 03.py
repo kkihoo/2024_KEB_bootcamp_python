@@ -41,6 +41,19 @@
 # print(int(numbers[0]) + int(numbers[1])) # arithmetic operation 산술연산
 
 # join()
-subjects = ["Python", "C++", "Database"]
-subjects_string = "/".join(subjects)
-print(subjects_string) #리스트에 있던 요소들이 /를 포함에서 한줄로 나타남
+# subjects = ["Python", "C++", "Database"]
+# subjects_string = "/".join(subjects)
+# print(subjects_string) #리스트에 있던 요소들이 /를 포함에서 한줄로 나타남
+
+
+문자열 replace
+# course = "2024 KEB Bootcamp"
+# print(course.replace('KEB', 'Inha')) #replace를 썼을때 잠시만 바뀜
+# print(course)
+# course = course.replace('KEB', 'Inha') #할당해주면 바꾸기 가능
+# print(course)
+
+course = "KEB 2024 KEB Bootcamp"
+course = course.replace('KEB', 'Inha', 1) # .replace(바꿀 대상, 바뀔 문자, 몇개를 바꿀지)
+print(course)
+
