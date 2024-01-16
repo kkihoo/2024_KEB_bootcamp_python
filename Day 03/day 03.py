@@ -87,8 +87,12 @@
 # print(setup.lower()) # 모든 문자 소문자로 변경
 
 # %s %d %f (string, decimal, float)
-thing = 'woodchuck'
-print('%+12s' %thing) # 오른쪽 정렬
+# thing = 'woodchuck'
+# print('%+12s' %thing) # 오른쪽 정렬
+#
+# thing = 91.58
+# print('%+3f' %thing)
 
-thing = 91.58
-print('%+3f' %thing)
+# Dictionary형 format
+subjects = {'python' : 'Kim', 'c++' : 'Sung', 'datastructure': 'Kim', 'database' : 'Kang' }
+print("{0[c++]} {0[datastructure]}".format(subjects))
