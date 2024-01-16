@@ -31,11 +31,16 @@
 # print(university[::2]) #두칸씩 비우고 나타내줌
 # print(university[0:16:3])#0부터 16번까지 3칸씩 띄워서 나타냄
 
-#split()
+# split()
 # course = "2024 KEB Bootcamp"
 # print(course.split())
 # print(course.split('B'))
 
-numbers = input("FirstNumber SecondNumber : ").split() #input은 기본적으로 문자열을 출력함
-print(numbers[0] + numbers[1]) #concatenation 연속
-print(int(numbers[0]) + int(numbers[1])) # arithmetic operation 산술연산
+# numbers = input("FirstNumber SecondNumber : ").split() #input은 기본적으로 문자열을 출력함
+# print(numbers[0] + numbers[1]) #concatenation 연속
+# print(int(numbers[0]) + int(numbers[1])) # arithmetic operation 산술연산
+
+# join()
+subjects = ["Python", "C++", "Database"]
+subjects_string = "/".join(subjects)
+print(subjects_string) #리스트에 있던 요소들이 /를 포함에서 한줄로 나타남
