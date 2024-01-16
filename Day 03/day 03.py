@@ -32,6 +32,10 @@
 # print(university[0:16:3])#0부터 16번까지 3칸씩 띄워서 나타냄
 
 #split()
-course = "2024 KEB Bootcamp"
-print(course.split())
-print(course.split('B'))
+# course = "2024 KEB Bootcamp"
+# print(course.split())
+# print(course.split('B'))
+
+numbers = input("FirstNumber SecondNumber : ").split() #input은 기본적으로 문자열을 출력함
+print(numbers[0] + numbers[1]) #concatenation 연속
+print(int(numbers[0]) + int(numbers[1])) # arithmetic operation 산술연산
