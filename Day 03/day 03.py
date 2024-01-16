@@ -111,16 +111,21 @@
 #     print(f'{num} is NOT prime number')
 
 
-num = int(input("Input number : "))
-cnt = 0
-i = 2
-while i < num :
-    if num % i == 0 :
-        cnt = cnt + 1
-        break
-    # print(i, end = "")
-    i = i + 1
-if cnt == 0:
-    print(f'{num} is prime number')
-else :
-    print(f'{num} is NOT prime number')
+# prime number
+number = int(input("Input number : "))
+is_prime = True
+
+if number < 2:
+    print(f'{number} is NOT prime number!')
+else:
+    i = 2
+    while i < number:
+        if number % i == 0:
+            is_prime = False
+            break
+        i = i + 1
+
+    if is_prime:
+        print(f'{number} is prime number')
+    else:
+        print(f'{number} is NOT prime number!')
