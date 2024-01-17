@@ -24,6 +24,7 @@
 # while i * i <= number 의 경우, i 의 최대값은 number 의 제곱근입니다. 따라서, 이 반복문은 number 가 제곱근이 1 이하인 경우에도 i 가 number 의 제곱근까지만 반복하게 됩니다.
 # 소수의 경우, 제곱근보다 큰 약수가 존재하지 않습니다. 따라서, i 가 number 의 제곱근까지만 반복하면 소수를 찾는 데 필요한 모든 약수를 검사할 수 있습니다.
 
+
 # ## Tuple
 # t1 = (5)
 # t2 = 5,
@@ -103,12 +104,33 @@
 # print(list(zip(eng, kor)))
 # print(dict(zip(eng, kor)))
 #for문 리스트작성
-squares = list()
-for i in range(1,6 ,1):
-    squares.append((i*i))
-print(squares)
-#list comprehension
-squares = [i*i for i in range(1,6,1)]
-print(squares)
-even_squares = [i*i for i in range(1,6,1) if i % 2 ==0]
-print(even_squares)
+# squares = list()
+# for i in range(1,6 ,1):
+#     squares.append((i*i))
+# print(squares)
+# #list comprehension
+# squares = [i*i for i in range(1,6,1)]
+# print(squares)
+# even_squares = [i*i for i in range(1,6,1) if i % 2 ==0]
+# print(even_squares)
+
+
+# Dictionary {} dict()
+sugang = dict(python="kim", db="kang", cpp="sung")
+# print(sugang)
+# sugang['datastructure'] = 'kim' #add
+# print(sugang)
+# sugang['datastructure'] = 'park' #update
+# print(sugang)
+# print(sugang['db'])
+# print(sugang.get('db')) #키의 값 리턴
+# print(sugang.get('opensource'))
+# print(sugang.get('opensource', 'not exist'))
+for subject, professor in sugang.items():
+    print(f'{subject} 과목 담당교수는 {professor}입니다.')
+for k in sugang.keys():
+    print(k)
+for v in sugang.values():
+    print(v)
+for s in sugang.items():
+    print(s)
