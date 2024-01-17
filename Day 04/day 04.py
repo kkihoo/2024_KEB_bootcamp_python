@@ -23,6 +23,7 @@
 # while i <= number 의 경우, i 의 최대값은 number 입니다. 따라서, 이 반복문은 number 가 제곱근이 1 이하인 경우에도 i 가 number 까지 반복하게 됩니다.
 # while i * i <= number 의 경우, i 의 최대값은 number 의 제곱근입니다. 따라서, 이 반복문은 number 가 제곱근이 1 이하인 경우에도 i 가 number 의 제곱근까지만 반복하게 됩니다.
 # 소수의 경우, 제곱근보다 큰 약수가 존재하지 않습니다. 따라서, i 가 number 의 제곱근까지만 반복하면 소수를 찾는 데 필요한 모든 약수를 검사할 수 있습니다.
+import copy
 
 # ## Tuple
 # t1 = (5)
@@ -51,35 +52,48 @@
 # print(id(t11), t11)
 
 ##List
-subjects = ["C++", "JAVA", "Python"]
-# subjects = subjects[::-1]
-subjects.reverse() # 위와 같이 자체의 값의 순서를 거꾸로 바꿔줌
-print(subjects)
-subjects.append("Database") # insert보다 append를 쓰는것을 추천!
-print(subjects)
-subjects.insert(5,"R") #위치와 뭘 넣을지
-print(subjects)
-others = ["Swift", "C"]
-subjects.extend(others) # 다른 list를 합칠수 있음
-print(subjects)
-#slice
-numbers = [1,2,3,4]
-numbers[1:3] = [8, 9] #1번과 2번을 8,9로 대체
-print(numbers)
-#delete
-del subjects[0]
-print(subjects)
-subjects.remove("C")
-print(subjects)
-subjects.pop() #맨 뒤에 있는 것을 삭제
-print(subjects)
-subjects.pop(0) #숫자를 넣으면 del 과 같은 기능
-print(subjects)
-subjects.clear() #싹 다 삭제
-print(subjects)
-#index
-subjects = ["C++", "데이터베이스", "리눅스" ,"Swift", "5" ,"HTML", "JAVA", "9" ,"Python"]
-print(subjects.index('Python'))
-# subjects.sort() # sort(reverse=True)는 거꾸로 , (숫자 영어 한글 순)
-copy_subjects = sorted(subjects)
-print(subjects, copy_subjects)
+# subjects = ["C++", "JAVA", "Python"]
+# # subjects = subjects[::-1]
+# subjects.reverse() # 위와 같이 자체의 값의 순서를 거꾸로 바꿔줌
+# print(subjects)
+# subjects.append("Database") # insert보다 append를 쓰는것을 추천!
+# print(subjects)
+# subjects.insert(5,"R") #위치와 뭘 넣을지
+# print(subjects)
+# others = ["Swift", "C"]
+# subjects.extend(others) # 다른 list를 합칠수 있음
+# print(subjects)
+# #slice
+# numbers = [1,2,3,4]
+# numbers[1:3] = [8, 9] #1번과 2번을 8,9로 대체
+# print(numbers)
+# #delete
+# del subjects[0]
+# print(subjects)
+# subjects.remove("C")
+# print(subjects)
+# subjects.pop() #맨 뒤에 있는 것을 삭제
+# print(subjects)
+# subjects.pop(0) #숫자를 넣으면 del 과 같은 기능
+# print(subjects)
+# subjects.clear() #싹 다 삭제
+# print(subjects)
+# #index
+# subjects = ["C++", "데이터베이스", "리눅스" ,"Swift", "5" ,"HTML", "JAVA", "9" ,"Python"]
+# print(subjects.index('Python'))
+# # subjects.sort() # sort(reverse=True)는 거꾸로 , (숫자 영어 한글 순)
+# copy_subjects = sorted(subjects)
+# print(subjects, copy_subjects)
+#copy
+# subjects = ["a", "b", "c"]
+subjects = ["a", ["b", "c"], "d"]
+a = subjects
+b = subjects.copy()
+c = list(subjects)
+d = subjects[:]
+print(subjects, a, b, c, d)
+# subjects[1] = "x" Shallow copy
+# print(subjects, a, b ,c ,d)
+e = copy.deepcopy(a) # deep copy는 요소가 변형이 와도 반영하지않음/ 같은 값을 가진 다를 객체라 보면됨
+subjects[1][1] = "x" # 요소가 변형 객체이면 변형 객체의 특성을 그대로 가져옴
+print(subjects, a, b ,c ,d,e)
