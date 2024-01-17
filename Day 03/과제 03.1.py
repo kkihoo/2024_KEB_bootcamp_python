@@ -1,5 +1,5 @@
 while True :
-    menu = input("\n1) Fahrenheit -> Celsius  2) Celsius -> Fahrenheit 3) Prime number checker 4) Prime number interval checker 5) Quit program : ")
+    menu = input("1) Fahrenheit -> Celsius  2) Celsius -> Fahrenheit 3) Prime number checker 4) Prime number interval checker 5) Quit program : ")
     if menu == '1':
         fahrenheit = float(input('Input Fahrenheit : '))
         print(f'Fahrenheit : {fahrenheit:.2f}F, Celsius : {(fahrenheit - 32) * 5 / 9:.2f}C')
@@ -43,6 +43,7 @@ while True :
                         is_prime = False
                         break
                 if is_prime: print(number, end=' ')
+        print()
     elif menu == '5':
         print('Terminate Program.')
         break
