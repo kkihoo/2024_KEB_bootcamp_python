@@ -24,29 +24,62 @@
 # while i * i <= number 의 경우, i 의 최대값은 number 의 제곱근입니다. 따라서, 이 반복문은 number 가 제곱근이 1 이하인 경우에도 i 가 number 의 제곱근까지만 반복하게 됩니다.
 # 소수의 경우, 제곱근보다 큰 약수가 존재하지 않습니다. 따라서, i 가 number 의 제곱근까지만 반복하면 소수를 찾는 데 필요한 모든 약수를 검사할 수 있습니다.
 
-## Tuple
-t1 = (5)
-t2 = 5,
-t3 = (5,)
-t4 = (5, 7)
-t5 = 5, 7
-print(type(t1), type(t2), type(t3), type(t4), type(t5)) #하나일 경우 int로 취급 반점이 있고 두개 이상일 경우 튜플이 됨  #꼭 소괄호가 필요한게 아니다!
-t6 = "python", "Kim" # packing
-print(type(t6), t6[1])
-subject, prof = t6 # unpacking
-print(prof, subject)
-t7 = ()
-t8 = tuple()
-print(type(t7), type(t8), type(9,), type((9,)))
-t9 = 1, 2, 3
-t10 = 1, 2
-print(t9 == t10)
-print(t9 >= t10)
-print(t9 > t10) # 튜플간의 비교연산이 가능
-t11 = 4.43,
-t12 = 3.97, 4.1, 3.2
-print(t11 + t12)
-print(id(t11), t11)
-t11 = t11 + t12
-print(id(t11), t11)
+# ## Tuple
+# t1 = (5)
+# t2 = 5,
+# t3 = (5,)
+# t4 = (5, 7)
+# t5 = 5, 7
+# print(type(t1), type(t2), type(t3), type(t4), type(t5)) #하나일 경우 int로 취급 반점이 있고 두개 이상일 경우 튜플이 됨  #꼭 소괄호가 필요한게 아니다!
+# t6 = "python", "Kim" # packing
+# print(type(t6), t6[1])
+# subject, prof = t6 # unpacking
+# print(prof, subject)
+# t7 = ()
+# t8 = tuple()
+# print(type(t7), type(t8), type(9,), type((9,)))
+# t9 = 1, 2, 3
+# t10 = 1, 2
+# print(t9 == t10)
+# print(t9 >= t10)
+# print(t9 > t10) # 튜플간의 비교연산이 가능
+# t11 = 4.43,
+# t12 = 3.97, 4.1, 3.2
+# print(t11 + t12)
+# print(id(t11), t11)
+# t11 = t11 + t12
+# print(id(t11), t11)
 
+##List
+subjects = ["C++", "JAVA", "Python"]
+# subjects = subjects[::-1]
+subjects.reverse() # 위와 같이 자체의 값의 순서를 거꾸로 바꿔줌
+print(subjects)
+subjects.append("Database") # insert보다 append를 쓰는것을 추천!
+print(subjects)
+subjects.insert(5,"R") #위치와 뭘 넣을지
+print(subjects)
+others = ["Swift", "C"]
+subjects.extend(others) # 다른 list를 합칠수 있음
+print(subjects)
+#slice
+numbers = [1,2,3,4]
+numbers[1:3] = [8, 9] #1번과 2번을 8,9로 대체
+print(numbers)
+#delete
+del subjects[0]
+print(subjects)
+subjects.remove("C")
+print(subjects)
+subjects.pop() #맨 뒤에 있는 것을 삭제
+print(subjects)
+subjects.pop(0) #숫자를 넣으면 del 과 같은 기능
+print(subjects)
+subjects.clear() #싹 다 삭제
+print(subjects)
+#index
+subjects = ["C++", "데이터베이스", "리눅스" ,"Swift", "5" ,"HTML", "JAVA", "9" ,"Python"]
+print(subjects.index('Python'))
+# subjects.sort() # sort(reverse=True)는 거꾸로 , (숫자 영어 한글 순)
+copy_subjects = sorted(subjects)
+print(subjects, copy_subjects)
