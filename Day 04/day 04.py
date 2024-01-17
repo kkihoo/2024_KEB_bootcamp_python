@@ -116,7 +116,7 @@
 
 
 # Dictionary {} dict()
-sugang = dict(python="kim", db="kang", cpp="sung")
+# sugang = dict(python="kim", db="kang", cpp="sung")
 # print(sugang)
 # sugang['datastructure'] = 'kim' #add
 # print(sugang)
@@ -126,11 +126,31 @@ sugang = dict(python="kim", db="kang", cpp="sung")
 # print(sugang.get('db')) #키의 값 리턴
 # print(sugang.get('opensource'))
 # print(sugang.get('opensource', 'not exist'))
-for subject, professor in sugang.items():
-    print(f'{subject} 과목 담당교수는 {professor}입니다.')
-for k in sugang.keys():
-    print(k)
-for v in sugang.values():
-    print(v)
-for s in sugang.items():
-    print(s)
+# for subject, professor in sugang.items():
+#     print(f'{subject} 과목 담당교수는 {professor}입니다.')
+# for k in sugang.keys():
+#     print(k)
+# for v in sugang.values():
+#     print(v)
+# for s in sugang.items():
+#     print(s)
+
+drinks_food = {"위스키" : "초콜릿", "와인" : "치즈", "소주" : "삼겹살", "고량주" : "양꼬치"}
+# drink = input(drinks_food.keys())
+drinks_food_keys = list(drinks_food)
+# print(drinks_food_keys)
+while True:
+    drink = input(f'다음 술 중에 고르세요.\n1) {drinks_food_keys[0]} 2) {drinks_food_keys[1]} 3) {drinks_food_keys[2]} 4) {drinks_food_keys[3]} 5) 종료\n 입력 : ')
+    if drink == '1':
+        print(f'추천 안주는 {drinks_food[drinks_food_keys[0]]} 입니다.')
+    elif drink == '2':
+        print(f'추천 안주는 {drinks_food[drinks_food_keys[1]]} 입니다.')
+    elif drink == '3':
+        print(f'추천 안주는 {drinks_food[drinks_food_keys[2]]} 입니다.')
+    elif drink == '4':
+        print(f'추천 안주는 {drinks_food[drinks_food_keys[3]]} 입니다.')
+    elif drink == '5':
+        print(f'다음에 또 오세요~')
+        break
+    else:
+        print('올바른 값을 선택해주세요.')
