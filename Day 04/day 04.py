@@ -135,12 +135,14 @@
 # for s in sugang.items():
 #     print(s)
 
+import random
 drinks_food = {"위스키" : "초콜릿", "와인" : "치즈", "소주" : "삼겹살", "고량주" : "양꼬치"}
+
 # drink = input(drinks_food.keys())
 drinks_food_keys = list(drinks_food)
 # print(drinks_food_keys)
 while True:
-    drink = input(f'다음 술 중에 고르세요.\n1) {drinks_food_keys[0]} 2) {drinks_food_keys[1]} 3) {drinks_food_keys[2]} 4) {drinks_food_keys[3]} 5) 종료\n 입력 : ')
+    drink = input(f'다음 술 중에 고르세요.\n1) {drinks_food_keys[0]} 2) {drinks_food_keys[1]} 3) {drinks_food_keys[2]} 4) {drinks_food_keys[3]} 5) 아무거나 추천 6) 종료\n 입력 : ')
     if drink == '1':
         print(f'추천 안주는 {drinks_food[drinks_food_keys[0]]} 입니다.')
     elif drink == '2':
@@ -150,6 +152,9 @@ while True:
     elif drink == '4':
         print(f'추천 안주는 {drinks_food[drinks_food_keys[3]]} 입니다.')
     elif drink == '5':
+        random_drink = random.choice(drinks_food_keys)
+        print(f'술은 {random_drink}이고, 추천 안주는 {drinks_food[random_drink]} 입니다.')
+    elif drink == '6':
         print(f'다음에 또 오세요~')
         break
     else:
