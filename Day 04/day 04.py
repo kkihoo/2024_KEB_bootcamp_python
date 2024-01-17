@@ -51,6 +51,7 @@ import copy
 # t11 = t11 + t12
 # print(id(t11), t11)
 
+
 ##List
 # subjects = ["C++", "JAVA", "Python"]
 # # subjects = subjects[::-1]
@@ -84,16 +85,21 @@ import copy
 # # subjects.sort() # sort(reverse=True)는 거꾸로 , (숫자 영어 한글 순)
 # copy_subjects = sorted(subjects)
 # print(subjects, copy_subjects)
-#copy
-# subjects = ["a", "b", "c"]
-subjects = ["a", ["b", "c"], "d"]
-a = subjects
-b = subjects.copy()
-c = list(subjects)
-d = subjects[:]
-print(subjects, a, b, c, d)
-# subjects[1] = "x" Shallow copy
-# print(subjects, a, b ,c ,d)
-e = copy.deepcopy(a) # deep copy는 요소가 변형이 와도 반영하지않음/ 같은 값을 가진 다를 객체라 보면됨
-subjects[1][1] = "x" # 요소가 변형 객체이면 변형 객체의 특성을 그대로 가져옴
-print(subjects, a, b ,c ,d,e)
+# #copy
+# # subjects = ["a", "b", "c"]
+# subjects = ["a", ["b", "c"], "d"]
+# a = subjects
+# b = subjects.copy()
+# c = list(subjects)
+# d = subjects[:]
+# print(subjects, a, b, c, d)
+# # subjects[1] = "x" Shallow copy
+# # print(subjects, a, b ,c ,d)
+# e = copy.deepcopy(a) # deep copy는 요소가 변형이 와도 반영하지않음/ 같은 값을 가진 다를 객체라 보면됨
+# subjects[1][1] = "x" # 요소가 변형 객체이면 변형 객체의 특성을 그대로 가져옴
+# print(subjects, a, b ,c ,d,e)
+# zip()
+eng =  "Monday", "Tuesday", "Wendnesday"
+kor = "월요일", "화요일", "수요일"
+print(list(zip(eng, kor)))
+print(dict(zip(eng, kor)))
