@@ -23,7 +23,6 @@
 # while i <= number 의 경우, i 의 최대값은 number 입니다. 따라서, 이 반복문은 number 가 제곱근이 1 이하인 경우에도 i 가 number 까지 반복하게 됩니다.
 # while i * i <= number 의 경우, i 의 최대값은 number 의 제곱근입니다. 따라서, 이 반복문은 number 가 제곱근이 1 이하인 경우에도 i 가 number 의 제곱근까지만 반복하게 됩니다.
 # 소수의 경우, 제곱근보다 큰 약수가 존재하지 않습니다. 따라서, i 가 number 의 제곱근까지만 반복하면 소수를 찾는 데 필요한 모든 약수를 검사할 수 있습니다.
-import copy
 
 # ## Tuple
 # t1 = (5)
@@ -98,8 +97,18 @@ import copy
 # e = copy.deepcopy(a) # deep copy는 요소가 변형이 와도 반영하지않음/ 같은 값을 가진 다를 객체라 보면됨
 # subjects[1][1] = "x" # 요소가 변형 객체이면 변형 객체의 특성을 그대로 가져옴
 # print(subjects, a, b ,c ,d,e)
-# zip()
-eng =  "Monday", "Tuesday", "Wendnesday"
-kor = "월요일", "화요일", "수요일"
-print(list(zip(eng, kor)))
-print(dict(zip(eng, kor)))
+# #zip()
+# eng =  "Monday", "Tuesday", "Wendnesday"
+# kor = "월요일", "화요일", "수요일"
+# print(list(zip(eng, kor)))
+# print(dict(zip(eng, kor)))
+#for문 리스트작성
+squares = list()
+for i in range(1,6 ,1):
+    squares.append((i*i))
+print(squares)
+#list comprehension
+squares = [i*i for i in range(1,6,1)]
+print(squares)
+even_squares = [i*i for i in range(1,6,1) if i % 2 ==0]
+print(even_squares)
