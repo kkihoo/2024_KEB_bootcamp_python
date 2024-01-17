@@ -146,13 +146,13 @@ drinks_food.update(japan_drinks_food)
 # drink = input(drinks_food.keys())
 drinks_food_keys = list(drinks_food)
 
-print(drinks_food)
-print(drinks_food.pop("고량주"))
-print(drinks_food) #.pop()은 벨류값을 리턴후 삭제 .remove()는 리턴해주지 않고 삭제
-print(drinks_food_keys)
+# print(drinks_food)
+# print(drinks_food.pop("고량주"))
+# print(drinks_food) #.pop()은 벨류값을 리턴후 삭제 .remove()는 리턴해주지 않고 삭제
+# print(drinks_food_keys)
 
 while True:
-    drink = input(f'다음 술 중에 고르세요.\n1) {drinks_food_keys[0]} 2) {drinks_food_keys[1]} 3) {drinks_food_keys[2]} 4) {drinks_food_keys[3]} 5) {drinks_food_keys[4]} 6) 아무거나 추천 7) 종료\n 입력 : ')
+    drink = input(f'\n다음 술 중에 고르세요.\n1) {drinks_food_keys[0]} 2) {drinks_food_keys[1]} 3) {drinks_food_keys[2]} 4) {drinks_food_keys[3]} 5) {drinks_food_keys[4]} 6) 아무거나 추천 7) 종료\n 입력 : ')
     if drink == '1':
         print(f'추천 안주는 {drinks_food[drinks_food_keys[0]]} 입니다.')
     elif drink == '2':
@@ -165,7 +165,7 @@ while True:
         print(f'추천 안주는 {drinks_food[drinks_food_keys[4]]} 입니다.')
     elif drink == '6':
         random_drink = random.choice(drinks_food_keys)
-        print(f'술은 {random_drink}이고, 추천 안주는 {drinks_food[random_drink]} 입니다.')
+        print(f'술은 {random_drink}이고, 추천 안주는 {random.choice(list(drinks_food.values()))} 입니다.')
     elif drink == '7':
         print(f'다음에 또 오세요~')
         break
