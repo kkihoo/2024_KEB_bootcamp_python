@@ -13,6 +13,8 @@ def isprime(n) -> bool: # 화살표는 함수 리턴값의 주석 역할
                 return False
             i += 1
         return True
+# help(isprime)
+# print(isprime.__doc__)
 
 while True :
     menu = input("1) Fahrenheit -> Celsius  2) Celsius -> Fahrenheit 3) Prime number checker 4) Prime number interval checker 5) Quit program : ")
