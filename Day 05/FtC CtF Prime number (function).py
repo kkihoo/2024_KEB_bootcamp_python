@@ -34,11 +34,13 @@ while True :
             print(f'{number} is prime number')
 
     elif menu == '4':
-        numbers = input("Input number : ").split()
-        n1 = int(numbers[0])
-        n2 = int(numbers[1])
-        if n1 > n2:
-            n1, n2 = n2, n1
+        n1, n2 = map(int, input("Input first second number : ").split())
+        n1 ,n2 = min(n1,n2), max(n1,n2)
+        # numbers = input("Input first second number : ").split()
+        # n1 = int(numbers[0])
+        # n2 = int(numbers[1])
+        # if n1 > n2:
+        #     n1, n2 = n2, n1
 
         for number in range(n1, n2 + 1):
             if isprime(number):
