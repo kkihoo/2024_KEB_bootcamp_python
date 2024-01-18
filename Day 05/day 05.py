@@ -52,12 +52,24 @@
 # print(sum(map(int, numbers)))
 
 # lambda 함수
-# def squares(n):
-#     return n * n
-even_numbers = [i for i in range(51) if i % 2 == 0]
-print(even_numbers)
-# print(tuple(map(squares, even_numbers)))
-print(tuple(map(lambda x : x**2, even_numbers)))
-# 또는
-z = lambda x :pow(x,2)
-print(tuple(map(z, even_numbers)))
+# # def squares(n):
+# #     return n * n
+# even_numbers = [i for i in range(51) if i % 2 == 0]
+# print(even_numbers)
+# # print(tuple(map(squares, even_numbers)))
+# print(tuple(map(lambda x : x**2, even_numbers)))
+# # 또는
+# z = lambda x :pow(x,2)
+# print(tuple(map(z, even_numbers)))
+
+def my_range(first=0, last=5, step=1):
+    number = first
+    while number < last :
+        yield number # 제너레이터는 return 대신 yield
+        number += step
+
+r = my_range()
+print(r, type(r))
+
+for x in r:
+    print(x)
