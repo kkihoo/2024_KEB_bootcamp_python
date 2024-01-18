@@ -42,11 +42,22 @@
 # print(squares(7,5,2,6,3))
 # print(run_function(squares, 9,10))
 
-numbers = ['7', '-11', '3']
-hap = 0
-for number in numbers :
-    hap = hap +int(number)
-print(hap)
+# numbers = ['7', '-11', '3']
+# hap = 0
+# for number in numbers :
+#     hap = hap +int(number)
+# print(hap)
+#
+# numbers = ['7', '-11', '3'] # map 함수
+# print(sum(map(int, numbers)))
 
-numbers = ['7', '-11', '3'] # map 함수
-print(sum(map(int, numbers)))
+# lambda 함수
+# def squares(n):
+#     return n * n
+even_numbers = [i for i in range(51) if i % 2 == 0]
+print(even_numbers)
+# print(tuple(map(squares, even_numbers)))
+print(tuple(map(lambda x : x**2, even_numbers)))
+# 또는
+z = lambda x :pow(x,2)
+print(tuple(map(z, even_numbers)))
