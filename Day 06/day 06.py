@@ -87,32 +87,54 @@
 # print(squirtle.name)
 
 ## 상속 부모 클래스 자식 클래스
-class Pokemon:
-    def __init__(self, name):
-        self.name = name
-    def attack(self, target):
-        print(f'{self.name}이(가) {target.name}을(를) 공격했다.')
+# class Pokemon:
+#     def __init__(self, name):
+#         self.name = name
+#     def attack(self, target):
+#         print(f'{self.name}이(가) {target.name}을(를) 공격했다.')
+#
+# class Pikachu(Pokemon):
+#     def __init__(self, name, type):
+#         super().__init__(name)
+#         self.type = type
+#     def attack(self, target):
+#         print(f'{self.name}이(가) {target.name}에게 {self.type}공격! 효과는 대단했다.')
+#     def electric_info(self):
+#         print(f'{self.name}은(는) {self.type} 계열의 공격을 합니다.')
+#
+# class Squirtle(Pokemon):
+#     pass
+#
+# class Agumon:
+#     pass
+#
+# p1 = Pikachu("피카츄", "전기")
+# p2 = Squirtle("꼬부기")
+# p1.electric_info()
+# p1.attack(p2)
+# p2.attack(p1)
+# print(p1.name, p1.type)
+# print(issubclass(Pikachu,Pokemon))
+# print(issubclass(Agumon,Pokemon))
 
-class Pikachu(Pokemon):
-    def __init__(self, name, type):
-        super().__init__(name)
-        self.type = type
-    def attack(self, target):
-        print(f'{self.name}이(가) {target.name}에게 {self.type}공격! 효과는 대단했다.')
-    def electric_info(self):
-        print(f'{self.name}은(는) {self.type} 계열의 공격을 합니다.')
+class Animal :
+    def says(self):
+        return 'I speak!'
 
-class Squirtle(Pokemon):
+class Horse(Animal):
+    def says(self):
+        return 'Neigh!'
+class Donkey(Animal):
+    def says(self):
+        return 'Hee-haw!'
+class Mule(Donkey, Horse):
     pass
+class Hinny(Horse, Donkey):
+    def says(self):
+        return 'Hinini'
+    # pass
 
-class Agumon:
-    pass
-
-p1 = Pikachu("피카츄", "전기")
-p2 = Squirtle("꼬부기")
-p1.electric_info()
-p1.attack(p2)
-p2.attack(p1)
-print(p1.name, p1.type)
-print(issubclass(Pikachu,Pokemon))
-print(issubclass(Agumon,Pokemon))
+m1 = Mule()
+h1 = Hinny()
+print(m1.says(), h1.says())
+print(Hinny.__mro__)
