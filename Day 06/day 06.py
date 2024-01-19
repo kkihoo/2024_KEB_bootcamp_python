@@ -141,22 +141,22 @@
 
 class FlyingMixin:
     def fly(self):
-        return f"{self.name}이(가) 비행합니다."
+        return f"{self.__name}이(가) 비행합니다."
 class SwimmingMixin:
     def swim(self):
-        return f"{self.name}이(가) 수영합니다."
+        return f"{self.__name}이(가) 수영합니다."
 class Pokemon:
     def __init__(self, name):
-        self.hidden_name = name
+        self.__name = name
 
     def attck(self):
         print("공격~")
     @property
     def name(self):
-        return self.hidden_name
+        return self.__name
     @name.setter
     def name(self, new_name):
-        self.hidden_name = new_name
+        self.__name = new_name
 
     # name = property(get_name, set_name)
 
@@ -174,8 +174,10 @@ c1 = Charizard("리자몽")
 # Charizard.attck(c1) # 위와 같음, (c1) : 클래스중 어떤 속성이 실행하는지
 
 # 프로퍼티
-g1.name = "잉어킹"
+# g1.name = "잉어킹"
 print(g1.name)
+print(g1.__name)
+print(g1._Pokemon__name)
 
 # print(g1.get_name())
 # g1.set_name("잉어킹")
