@@ -45,15 +45,43 @@
 #     print(f'Program terminate')
 
 #
-def desc(f):
-    def wrapper():
-        print("study")
-        f()
-    # print("a")
-    return wrapper
+# def desc(f):
+#     def wrapper():
+#         print("study")
+#         f()
+#     # print("a")
+#     return wrapper
+#
+# def something():
+#     print("do something")
+#
+# s = desc(something)
+# s()
 
-def something():
-    print("do something")
+## 객체
+class Poketmon:
+    pass
+pikachu = Poketmon()
+squirtle = Poketmon()
+pikachu.name = "피카츄"
+pikachu.nemesis = squirtle
+print(pikachu.name)
+squirtle.name = "꼬부기"
+print(pikachu.nemesis.name) # squirtle.name 과 동일
+print(squirtle.name)
 
-s = desc(something)
-s()
+#메소드 : 클래스 또는 객체의 함수.
+class Poketmon:
+    def __init__(self, name): # self는 자동으로 들어가는 매개변수 , # __init__ 는 개별 객체를 초기화 하는 매소드
+        self.name = name
+        print(f"{name} 포켓몬스터 생성")
+    def attack(self, target):
+        print(f'{self.name}이(가) {target.name}을(를) 공격했다...! 효과는 대단했다.')
+
+charizard = Poketmon("리자몽")
+pikachu = Poketmon("피카츄")
+squirtle = Poketmon("꼬부기")
+charizard.attack(squirtle)
+print(pikachu) #객체 주소가 나옴
+print(pikachu.name)
+print(squirtle.name)
