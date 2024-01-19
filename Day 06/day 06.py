@@ -117,24 +117,65 @@
 # print(issubclass(Pikachu,Pokemon))
 # print(issubclass(Agumon,Pokemon))
 
-class Animal :
-    def says(self):
-        return 'I speak!'
+# class Animal :
+#     def says(self):
+#         return 'I speak!'
+#
+# class Horse(Animal):
+#     def says(self):
+#         return 'Neigh!'
+# class Donkey(Animal):
+#     def says(self):
+#         return 'Hee-haw!'
+# class Mule(Donkey, Horse):
+#     pass
+# class Hinny(Horse, Donkey):
+#     def says(self):
+#         return 'Hinini'
+#     # pass
+#
+# m1 = Mule()
+# h1 = Hinny()
+# print(m1.says(), h1.says())
+# print(Hinny.__mro__)
 
-class Horse(Animal):
-    def says(self):
-        return 'Neigh!'
-class Donkey(Animal):
-    def says(self):
-        return 'Hee-haw!'
-class Mule(Donkey, Horse):
+class FlyingMixin:
+    def fly(self):
+        return f"{self.name}이(가) 비행합니다."
+class SwimmingMixin:
+    def swim(self):
+        return f"{self.name}이(가) 수영합니다."
+class Pokemon:
+    def __init__(self, name):
+        self.hidden_name = name
+
+    def attck(self):
+        print("공격~")
+    def get_name(self):
+        return self.hidden_name
+    def set_name(self, new_name):
+        self.hidden_name = new_name
+
+    name = property(get_name, set_name)
+
+
+class Charizard(Pokemon,FlyingMixin):
     pass
-class Hinny(Horse, Donkey):
-    def says(self):
-        return 'Hinini'
-    # pass
+class Gyarados(Pokemon, SwimmingMixin):
+    pass
 
-m1 = Mule()
-h1 = Hinny()
-print(m1.says(), h1.says())
-print(Hinny.__mro__)
+g1 = Gyarados("갸라도스")
+c1 = Charizard("리자몽")
+# print(c1.fly())
+# print(g1.swim())
+# c1.attck()
+# Charizard.attck(c1) # 위와 같음, (c1) : 클래스중 어떤 속성이 실행하는지
+
+# 프로퍼티
+g1.name = "잉어킹"
+print(g1.name)
+
+# print(g1.get_name())
+# g1.set_name("잉어킹")
+# print(g1.get_name())
+
