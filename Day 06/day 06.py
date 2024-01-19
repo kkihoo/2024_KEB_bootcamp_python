@@ -59,29 +59,60 @@
 # s()
 
 ## 객체
-class Poketmon:
-    pass
-pikachu = Poketmon()
-squirtle = Poketmon()
-pikachu.name = "피카츄"
-pikachu.nemesis = squirtle
-print(pikachu.name)
-squirtle.name = "꼬부기"
-print(pikachu.nemesis.name) # squirtle.name 과 동일
-print(squirtle.name)
+# class Poketmon:
+#     pass
+# pikachu = Poketmon()
+# squirtle = Poketmon()
+# pikachu.name = "피카츄"
+# pikachu.nemesis = squirtle
+# print(pikachu.name)
+# squirtle.name = "꼬부기"
+# print(pikachu.nemesis.name) # squirtle.name 과 동일
+# print(squirtle.name)
+#
+# #메소드 : 클래스 또는 객체의 함수.
+# class Poketmon:
+#     def __init__(self, name): # self는 자동으로 들어가는 매개변수 , # __init__ 는 개별 객체를 초기화 하는 매소드
+#         self.name = name
+#         print(f"{name} 포켓몬스터 생성")
+#     def attack(self, target):
+#         print(f'{self.name}이(가) {target.name}을(를) 공격했다...! 효과는 대단했다.')
+#
+# charizard = Poketmon("리자몽")
+# pikachu = Poketmon("피카츄")
+# squirtle = Poketmon("꼬부기")
+# charizard.attack(squirtle)
+# print(pikachu) #객체 주소가 나옴
+# print(pikachu.name)
+# print(squirtle.name)
 
-#메소드 : 클래스 또는 객체의 함수.
-class Poketmon:
-    def __init__(self, name): # self는 자동으로 들어가는 매개변수 , # __init__ 는 개별 객체를 초기화 하는 매소드
+## 상속 부모 클래스 자식 클래스
+class Pokemon:
+    def __init__(self, name):
         self.name = name
-        print(f"{name} 포켓몬스터 생성")
     def attack(self, target):
-        print(f'{self.name}이(가) {target.name}을(를) 공격했다...! 효과는 대단했다.')
+        print(f'{self.name}이(가) {target.name}을(를) 공격했다.')
 
-charizard = Poketmon("리자몽")
-pikachu = Poketmon("피카츄")
-squirtle = Poketmon("꼬부기")
-charizard.attack(squirtle)
-print(pikachu) #객체 주소가 나옴
-print(pikachu.name)
-print(squirtle.name)
+class Pikachu(Pokemon):
+    def __init__(self, name, type):
+        super().__init__(name)
+        self.type = type
+    def attack(self, target):
+        print(f'{self.name}이(가) {target.name}에게 {self.type}공격! 효과는 대단했다.')
+    def electric_info(self):
+        print(f'{self.name}은(는) {self.type} 계열의 공격을 합니다.')
+
+class Squirtle(Pokemon):
+    pass
+
+class Agumon:
+    pass
+
+p1 = Pikachu("피카츄", "전기")
+p2 = Squirtle("꼬부기")
+p1.electric_info()
+p1.attack(p2)
+p2.attack(p1)
+print(p1.name, p1.type)
+print(issubclass(Pikachu,Pokemon))
+print(issubclass(Agumon,Pokemon))
