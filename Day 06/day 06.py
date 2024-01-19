@@ -151,12 +151,14 @@ class Pokemon:
 
     def attck(self):
         print("공격~")
-    def get_name(self):
+    @property
+    def name(self):
         return self.hidden_name
-    def set_name(self, new_name):
+    @name.setter
+    def name(self, new_name):
         self.hidden_name = new_name
 
-    name = property(get_name, set_name)
+    # name = property(get_name, set_name)
 
 
 class Charizard(Pokemon,FlyingMixin):
@@ -179,3 +181,4 @@ print(g1.name)
 # g1.set_name("잉어킹")
 # print(g1.get_name())
 
+#히든네임을 생성하는 이유는 외부에서 직접 접근하지 못하도록 하기 위해
