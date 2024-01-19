@@ -1,16 +1,36 @@
 # 재귀 함수
+# def factorial_repetition(n) -> int:
+#     result = 1
+#     for i in range(2, n+1):
+#         result = result * i
+#     return result
+#
+# def factorial_recursion(n):
+#
+#     if n == 1 :
+#         return n
+#     else:
+#         return n * factorial_recursion(n-1)
+#
+# number = int(input("number : "))
+# print(factorial_repetition(number))
+# print(factorial_recursion(number))
 
-def factorial_repetition(n) -> int:
-    """
-    반복문을 이용한 팩토리얼 함수
-    :param n:
-    """
-    result = 1
-    for i in range(2, 2+1):
-        result = result * i
+#예외처리
+import random
 
+numbers = [random.randint(1,100) for i in range(5)]
+print(numbers)
 
-def factorial_recursion(n):
-    '''
-
-    '''
+try :
+    pick = int(input(f'Input index (0 ~ {len(numbers)-1}) : '))
+    print(numbers[pick])
+    print(5/0)
+except IndexError as err :# 먼저 디테일한 에러들을 처리해줌
+    print(f"Out of range : Wrong index number\n{err}")
+except ValueError as err : # as 'name' 하고 출력에 넣으면 에러뜬 이유를 텍스트로 보여줌
+    print(f"Input only Number!\n{err}")
+except ZeroDivisionError as err : #print(5/0)에 대한 예외처리
+    print(f'The denominator cannot be 0.\n{err}')
+except Exception as err: # 보험식으로 맨 밑으로 가는것이 문법적으로 옳다
+    print(f"Error occurs\n{err}")
