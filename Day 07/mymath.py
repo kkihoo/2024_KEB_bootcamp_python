@@ -14,4 +14,8 @@ def isprime(n) -> bool: # 화살표는 함수 리턴값의 주석 역할
             i += 1
         return True
 
-def
+def fahrenheit_to_celsius(fahrenheit) -> float:
+    return (fahrenheit - 32.0) * 5.0 / 9.0
+
+def celsius_to_fahrenheit(celsius) -> float:
+    return (celsius * 9.0 / 5.0) + 32.0

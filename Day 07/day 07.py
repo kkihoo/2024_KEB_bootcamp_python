@@ -156,11 +156,11 @@ while True :
     menu = input("1) Fahrenheit -> Celsius  2) Celsius -> Fahrenheit 3) Prime number checker 4) Prime number interval checker 5) Quit program : ")
     if menu == '1':
         fahrenheit = float(input('Input Fahrenheit : '))
-        print(f'Fahrenheit : {fahrenheit:.2f}F, Celsius : {(fahrenheit - 32) * 5 / 9:.2f}C')
+        print(f'Fahrenheit : {fahrenheit:.2f}F, Celsius : {mymath.fahrenheit_to_celsius(fahrenheit):.2f}C')
 
     elif menu == '2':
         celsius = float(input('Input Celsius : '))
-        print(f'Celsius : {celsius:.2f}C, Fahrenheit : {(celsius*9.0/5.0)+32.0:.2f}F')
+        print(f'Celsius : {celsius:.2f}C, Fahrenheit : {mymath.celsius_to_fahrenheit(celsius):.2f}F')
 
     elif menu == '3':
         number = int(input("Input number : "))
