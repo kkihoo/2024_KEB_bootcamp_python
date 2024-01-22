@@ -176,7 +176,7 @@ c1 = Charizard("리자몽")
 # 프로퍼티
 # g1.name = "잉어킹"
 print(g1.name)
-print(g1.__name)
+# print(g1.__name)
 print(g1._Pokemon__name)
 
 # print(g1.get_name())
